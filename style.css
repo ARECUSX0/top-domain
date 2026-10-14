@@ -1,3 +1,13 @@
+:root {
+  --bg: #0f1115;
+  --surface: #181b21;
+  --border: #2a2e37;
+  --text: #e4e6eb;
+  --text-dim: #a0a4ae;
+  --accent: #6ea8fe;
+  --accent-text: #0f1115;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +16,8 @@
 
 body {
   font-family: system-ui, Arial, sans-serif;
-  color: #222;
-  background: #f7f7f7;
+  color: var(--text);
+  background: var(--bg);
   line-height: 1.5;
 }
 
@@ -16,18 +26,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #1f2937;
-  color: #fff;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
 }
 
 .site-header nav a {
-  color: #fff;
+  color: var(--text);
   text-decoration: none;
   margin-left: 1.5rem;
 }
 
 .site-header nav a:hover {
-  text-decoration: underline;
+  color: var(--accent);
 }
 
 main {
@@ -47,7 +58,7 @@ section {
 
 h2 {
   margin-bottom: 1rem;
-  border-bottom: 2px solid #1f2937;
+  border-bottom: 2px solid var(--accent);
   display: inline-block;
   padding-bottom: 0.25rem;
 }
@@ -60,8 +71,9 @@ h2 {
 }
 
 .skills-list li {
-  background: #1f2937;
-  color: #fff;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -74,11 +86,10 @@ h2 {
 }
 
 .project-card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1.25rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .project-card h3 {
@@ -87,11 +98,11 @@ h2 {
 
 .project-card p {
   margin-bottom: 0.75rem;
-  color: #444;
+  color: var(--text-dim);
 }
 
 .project-card a {
-  color: #1f2937;
+  color: var(--accent);
   font-weight: 600;
   text-decoration: none;
 }
@@ -109,12 +120,13 @@ h2 {
 }
 
 .contact-list a {
-  color: #1f2937;
+  color: var(--accent);
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  color: #666;
+  color: var(--text-dim);
   font-size: 0.9rem;
+  border-top: 1px solid var(--border);
 }
